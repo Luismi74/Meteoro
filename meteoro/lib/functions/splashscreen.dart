@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:meteoro/main.dart';
 import 'config.dart';
+import '../screens/item_details.dart';
 
 class SplashScreen extends StatefulWidget{
   final Color bgColor = Color(0xff123456);
@@ -13,7 +14,6 @@ _StateSplashScreen createState() => _StateSplashScreen();
 } 
 
 class _StateSplashScreen extends State<SplashScreen> {
-String _creatornote = 'Made with 🧡 for Meteoro';
 final splashDelay = 4;
 
 @override
@@ -27,7 +27,7 @@ _loadWidget() async {
     return Timer(_duration, navigationPage);}
 
   void navigationPage() {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => MyApp()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => OrderDetails()));
   }
 
 @override 
